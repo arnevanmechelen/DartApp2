@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DartApp.Views.ItemsPage"
+             Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Login" Clicked="Login_Clicked" />
+    </ContentPage.ToolbarItems>
+
+    <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding LoadItemsCommand}">
+        <StackLayout Margin="20,35,20,20">
+            <Label Text="Hello there, general Kenobi" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,50,0,50"></Label>
+            
+            <Button x:Name="Three01Button" Text="Play 301" Clicked="Three01Button_Clicked"/>
+            <Button x:Name="Four01Button" Text="Play 401" Clicked="Four01Button_Clicked"/>
+            
+        </StackLayout>
+        
+        
+        
+    </RefreshView> 
+</ContentPage>
