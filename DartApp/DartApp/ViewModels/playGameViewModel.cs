@@ -8,38 +8,152 @@ using Xamarin.Forms;
 
 namespace DartApp.ViewModels
 {
-    public class playGameViewModel : INotifyPropertyChanged
+    public class PlayGameViewModel : INotifyPropertyChanged
     {
-        private int scoreToWin, turnScore, totalGameScore, i;
+        private int scoreToWin;
+        private int turnScore, i;
         public ICommand AddScoreCommand { get; }
-
-        public playGameViewModel()
-        {
-            scoreToWin = 301;
-            turnScore = 0;
-            totalGameScore = scoreToWin;
+        public int throwScore;
+        public bool isWin;
+        public bool isTooMuch;
+        public bool playingGame;
+        
+        public PlayGameViewModel(int game)
+        {      
             i = 1;
-
-            AddScoreCommand = new Command(() => addScore(turnScore));
+            scoreToWin = game;
+            AddScoreCommand = new Command(() => addScore(ThrowScore));
+            isWin = false;
+            isTooMuch = false;
+            playingGame = true;
+            Multiplier = 1;
         }
 
-        public int ScoreToWin { get; set; }
-        public int TurnScore { get; set; }
-        public int TotalGameScore { get; set; }
+        public int Multiplier { get; set; }
+
+        public bool PlayingGame
+        {
+            get
+            {
+                return playingGame;
+            }
+            set
+            {
+                playingGame = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsTooMuch
+        {
+            get
+            {
+                return isTooMuch;
+            }
+            set
+            {
+                isTooMuch = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public bool IsWin
+        {
+            get
+            {
+                return isWin;
+            }
+            set
+            {
+                isWin = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int ThrowScore
+        {
+            get
+            {
+                return throwScore;
+            }
+            set
+            {
+                throwScore = value;
+                OnPropertyChanged();
+            }
+        }
+        public int I
+        {
+            get
+            {
+                return i;
+            }
+            set
+            {
+                i = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int ScoreToWin
+        {
+            get
+            {
+                return scoreToWin;
+            }
+            set
+            {
+                scoreToWin = value;
+                OnPropertyChanged();
+            }
+        }
+        public int TurnScore 
+        {
+            get
+            {
+                return turnScore;
+            }
+            set
+            {
+                turnScore = value;
+                OnPropertyChanged();
+            }
+        }
 
         private void addScore(int score)
         {
-            if(i <= 3)
+            ThrowScore = 0;
+            IsTooMuch = false;
+            
+            if(I <= 2)
             {
-                turnScore += score;
-                i++;
+                TurnScore += score;
+                I++;
             }
             else
             {
-                totalGameScore -= turnScore;
-                i = 1;
+                TurnScore += score;
+                if (ScoreToWin - TurnScore > 0)
+                {                    
+                    ScoreToWin -= TurnScore;                  
+                }
+                else if (ScoreToWin - TurnScore < 0)
+                {
+                    IsTooMuch = true;
+                }
+                else if(ScoreToWin - TurnScore == 0)
+                {
+                    IsWin = true;
+                    PlayingGame = false;
+                }
+               
+                TurnScore = 0;
+                I = 1;
             }
+            Multiplier = 1;
         }
+
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -47,5 +161,8 @@ namespace DartApp.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        
+        
     }
 }

@@ -31,7 +31,7 @@ namespace DartApp.Views
         {
             var layout = (BindableObject)sender;
             var item = (Item)layout.BindingContext;
-            await Navigation.PushAsync(new NavigationPage(new play301Page()));
+            //await Navigation.PushAsync(new NavigationPage(new play301Page()));
         }
 
         async void AddItem_Clicked(object sender, EventArgs e)
@@ -55,15 +55,15 @@ namespace DartApp.Views
         private async void Three01Button_Clicked(object sender, EventArgs e)
         {
             var item = new Item();
-            item.Id = "301";
-            await Navigation.PushAsync(new NavigationPage(new play301Page()));
+            item.Game = 301;
+            await Navigation.PushAsync(new NavigationPage(new play301Page(item.Game)));
         }
 
         private async void Four01Button_Clicked(object sender, EventArgs e)
         {
             var item = new Item();
-            item.Id = "401";
-            await Navigation.PushAsync(new NavigationPage(new play301Page()));
+            item.Game = 401;
+            await Navigation.PushAsync(new NavigationPage(new play301Page(item.Game)));
         }
     }
 }
