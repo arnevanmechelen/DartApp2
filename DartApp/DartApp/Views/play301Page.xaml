@@ -6,57 +6,52 @@
              mc:Ignorable="d"
              x:Class="DartApp.Views.play301Page">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#e3292e" VerticalOptions="FillAndExpand">
             <StackLayout x:Name="gamePlayingStack" IsVisible="{Binding PlayingGame}">
-                <Label Text="Throw score:"/>
+                <Label TextColor="Black"  Text="Throw score:"/>
                 <Entry x:Name="throwEntry" Text="{Binding ThrowScore}" HorizontalOptions="FillAndExpand" />
                 <Button x:Name="addScoreButton" Text="add score" Command="{Binding AddScoreCommand}" CommandParameter="{Binding ThrowScore}"/>
-                <StackLayout x:Name="boardStack" HeightRequest="380" BackgroundColor="Red">
-                    <Button x:Name="twentyButton" Text="20" Margin="185, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="fiveButton" Text="5" Margin="149, -50, 221, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="twelveButton" Text="12" Margin="113, -40, 257, 0" Clicked="scoreButton_Clicked" />
-                    <Button x:Name="nineButton" Text="9" Margin="77, -30, 293, 0" Clicked="scoreButton_Clicked" />
-                    <Button x:Name="fourteenButton" Text="14" Margin="55, -15, 315, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="elevenButton" Text="11" Margin="40, -15, 330, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="eightButton" Text="8" Margin="55, -15, 315, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="sixteenButton" Text="16" Margin="77, -15, 293, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="sevenButton" Text="7" Margin="113, -30, 257, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="nineteenButton" Text="19" Margin="149, -40, 221, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="threeButton" Text="3" Margin="185, -50" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="seventeenButton" Text="17" Margin="221, -7, 149, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="twoButton" Text="2" Margin="257, -67, 113, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="fifteenButton" Text="15" Margin="293, -77, 77, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="tenButton" Text="10" Margin="315, -93, 55, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="sixButton" Text="6" Margin="330, -93, 40, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="thirteenButton" Text="13" Margin="315, -93, 55, 0" Clicked="scoreButton_Clicked" />
-                    <Button x:Name="fourButton" Text="4" Margin="293, -93, 77, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="eightteenButton" Text="18" Margin="257, -77, 113, 0" Clicked="scoreButton_Clicked" />
-                    <Button x:Name="oneButton" Text="1" Margin="221, -67, 149, 0" Clicked="scoreButton_Clicked"/>
-                    <Button x:Name="bullsButton" Text="Bullseye" Margin="160,40, 160, 0" Clicked="bullsButton_Clicked"/>
-                    <Button x:Name="outerButton" Text="Outer Bull" Margin="150, -10" Clicked="outerButton_Clicked" />
+                <StackLayout x:Name="boardStack" HeightRequest="380">
+                    <Button CornerRadius="10" BackgroundColor="#1c1c1b" TextColor="#f5f5dc" x:Name="twentyButton" Text="20" Margin="185, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="fiveButton" Text="5" Margin="149, -50, 221, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="twelveButton" Text="12" Margin="113, -40, 257, 0" Clicked="scoreButton_Clicked" />
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="nineButton" Text="9" Margin="77, -30, 293, 0" Clicked="scoreButton_Clicked" />
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="fourteenButton" Text="14" Margin="55, -15, 315, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="elevenButton" Text="11" Margin="40, -15, 330, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="eightButton" Text="8" Margin="55, -15, 315, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="sixteenButton" Text="16" Margin="77, -15, 293, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="sevenButton" Text="7" Margin="113, -30, 257, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="nineteenButton" Text="19" Margin="149, -40, 221, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="threeButton" Text="3" Margin="185, -50" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="seventeenButton" Text="17" Margin="221, -7, 149, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="twoButton" Text="2" Margin="257, -67, 113, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="fifteenButton" Text="15" Margin="293, -77, 77, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="tenButton" Text="10" Margin="315, -93, 55, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="sixButton" Text="6" Margin="330, -93, 40, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="thirteenButton" Text="13" Margin="315, -93, 55, 0" Clicked="scoreButton_Clicked" />
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="fourButton" Text="4" Margin="293, -93, 77, 0" Clicked="scoreButton_Clicked"/>
+                    <Button CornerRadius="10" BackgroundColor="Black" TextColor="#f5f5dc" x:Name="eightteenButton" Text="18" Margin="257, -77, 113, 0" Clicked="scoreButton_Clicked" />
+                    <Button CornerRadius="10" BackgroundColor="#f5f5dc" TextColor="Black" x:Name="oneButton" Text="1" Margin="221, -67, 149, 0" Clicked="scoreButton_Clicked"/>
+                    <Button  x:Name="bullsButton" Text="Bullseye" Margin="150,40, 150, 0" Clicked="bullsButton_Clicked"/>
+                    <Button  x:Name="outerButton" Text="Outer Bull" Margin="150, -10" Clicked="outerButton_Clicked" />
 
                     <Button x:Name="doubleButton" Text="Double" Margin="5, 100, 5, 0" Clicked="doubleButton_Clicked" />
                     <Button x:Name="tripleButton" Text="Triple" Margin="5, -10" Clicked="tripleButton_Clicked" />
 
                 </StackLayout>
                 <StackLayout x:Name="outputStack" Padding="10">
-                    <Label Text="Score this turn:"/>
-                    <Label Text="{Binding TurnScore, Mode=TwoWay}"/>
-                    <Label Text="Points to go:" />
-                    <Label Text="{Binding ScoreToWin, Mode=TwoWay}"/>
-                    <Label Text="i:" />
-                    <Label Text="{Binding I}"/>
-                    <Label Text="Sorry, Too Much" IsVisible="{Binding IsTooMuch}" HorizontalOptions="FillAndExpand"/>
+                    <Label TextColor="Black" Text="{Binding TurnScore, StringFormat='Score this turn: {0}'}"/>
+                    <Label TextColor="Black" Text="{Binding ScoreToWin, StringFormat='Points to go: {0}'}" ></Label>
+                    <Label TextColor="Black" Text="Sorry, Too Much" IsVisible="{Binding IsTooMuch}" HorizontalOptions="FillAndExpand"/>
+                    <!--<Label Text="i:" />
+                    <Label Text="{Binding I}"/>-->
+                    
                 </StackLayout>    
-
-
-
-
                 
             </StackLayout>
 
             <StackLayout x:Name="gameWonStack" >
-                <Label Text="Congratulations, you've won" IsVisible="{Binding IsWin}" HorizontalOptions="FillAndExpand"/>
+                <Label TextColor="Black" Text="Congratulations, you've won" IsVisible="{Binding IsWin}" HorizontalOptions="FillAndExpand"/>
             </StackLayout>
            
             

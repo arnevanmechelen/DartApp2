@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
+using System.Threading.Tasks;
 
 namespace DartApp.ViewModels
 {
@@ -127,7 +128,7 @@ namespace DartApp.ViewModels
             
             if(I <= 2)
             {
-                TurnScore += score;
+                TurnScore += Multiplier * score;
                 I++;
             }
             else

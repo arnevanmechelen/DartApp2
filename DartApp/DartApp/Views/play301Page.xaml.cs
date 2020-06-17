@@ -19,12 +19,10 @@ namespace DartApp.Views
         {
             InitializeComponent();
             viewModel = new PlayGameViewModel(game);
-            this.BindingContext = viewModel;
-
-            
+            this.BindingContext = viewModel;            
         }
 
-        private void scoreButton_Clicked(object sender, EventArgs e)
+        private async void scoreButton_Clicked(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
             int score = Convert.ToInt32(btn.Text);

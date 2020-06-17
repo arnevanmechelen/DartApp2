@@ -8,9 +8,6 @@
              Title="{Binding Title}"
              x:Name="BrowseItemsPage">
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Login" Clicked="Login_Clicked" />
-    </ContentPage.ToolbarItems>
 
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding LoadItemsCommand}">
         <StackLayout Margin="20,35,20,20">
