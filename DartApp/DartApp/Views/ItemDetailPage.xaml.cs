@@ -14,7 +14,7 @@ namespace DartApp.Views
     public partial class ItemDetailPage : ContentPage
     {
         ItemDetailViewModel viewModel;
-        int scoreToWin;
+        
 
         public ItemDetailPage()
         {
@@ -22,12 +22,8 @@ namespace DartApp.Views
 
      
 
-            scoreToWin = 2;
-            var item = new Item
-            {
-                Text = "Item 1",
-                Description = "This is an item description."
-            };
+            
+            
 
             viewModel = new ItemDetailViewModel();
             BindingContext = viewModel;

@@ -10,11 +10,11 @@
 
 
     <RefreshView IsRefreshing="{Binding IsBusy, Mode=TwoWay}" Command="{Binding LoadItemsCommand}">
-        <StackLayout Margin="20,35,20,20">
-            <Label Text="Hello there, general Kenobi" HorizontalTextAlignment="Center" FontSize="Large" Margin="0,50,0,50"></Label>
+        <StackLayout>
+            <Label Text="Welcome to dart app! Choose a game." HorizontalTextAlignment="Center" FontSize="Large" Margin="0,50,0,50"></Label>
             
-            <Button x:Name="Three01Button" Text="Play 301" Clicked="Three01Button_Clicked"/>
-            <Button x:Name="Four01Button" Text="Play 401" Clicked="Four01Button_Clicked"/>
+            <Button x:Name="Three01Button" Text="Play 301" Clicked="Three01Button_Clicked" HorizontalOptions="FillAndExpand"/>
+            <Button x:Name="Four01Button" Text="Play 401" Clicked="Four01Button_Clicked" HorizontalOptions="FillAndExpand"/>
             
         </StackLayout>
         
