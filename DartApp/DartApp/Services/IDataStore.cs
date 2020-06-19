@@ -6,10 +6,10 @@ namespace DartApp.Services
 {
     public interface IDataStore<T>
     {
-        Task<bool> AddItemAsync(T item);
-        Task<bool> UpdateItemAsync(T item);
-        Task<bool> DeleteItemAsync(string id);
-        Task<T> GetItemAsync(string id);
-        Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        Task<bool> AddStatAsync(T item);
+        Task<bool> UpdateStatAsync(T item);
+        Task<bool> DeleteStatAsync(string name);
+        Task<T> GetStatAsync(string name);
+        Task<IEnumerable<T>> GetStatsAsync(bool forceRefresh = false);
     }
 }

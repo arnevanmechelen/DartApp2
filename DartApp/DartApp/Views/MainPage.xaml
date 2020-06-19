@@ -21,6 +21,9 @@
         </NavigationPage>
         
         <NavigationPage Title="Stats">
+            <x:Arguments>
+                <views:StatsPage />
+            </x:Arguments>
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_about.png"/>

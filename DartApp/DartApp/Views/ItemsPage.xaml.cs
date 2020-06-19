@@ -43,8 +43,8 @@ namespace DartApp.Views
         {
             base.OnAppearing();
 
-            if (viewModel.Items.Count == 0)
-                viewModel.IsBusy = true;
+            //if (viewModel.Items.Count == 0)
+            //    viewModel.IsBusy = true;
         }
 
         private void Login_Clicked(object sender, EventArgs e)

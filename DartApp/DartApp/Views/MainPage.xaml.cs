@@ -13,6 +13,7 @@ namespace DartApp.Views
         public MainPage()
         {
             InitializeComponent();
+
         }
     }
 }

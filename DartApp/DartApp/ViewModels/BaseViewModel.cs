@@ -12,7 +12,7 @@ namespace DartApp.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Stat> DataStore => DependencyService.Get<IDataStore<Stat>>();
 
         bool isBusy = false;
         public bool IsBusy

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DartApp.ViewModels
 {
-    public class PlayGameViewModel : INotifyPropertyChanged
+    public class PlayGameViewModel : BaseViewModel
     {
         private int scoreToWin;
         private int turnScore, i;
@@ -121,7 +121,7 @@ namespace DartApp.ViewModels
             }
         }
 
-        private void addScore(int score)
+        private async void addScore(int score)
         {
             ThrowScore = 0;
             IsTooMuch = false;
@@ -144,7 +144,7 @@ namespace DartApp.ViewModels
                 }
                 else if(ScoreToWin - TurnScore == 0)
                 {
-                    IsWin = true;
+                    IsWin = true;                 
                     PlayingGame = false;
                 }
                

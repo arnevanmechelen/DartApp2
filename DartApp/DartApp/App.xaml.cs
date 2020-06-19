@@ -13,7 +13,7 @@ namespace DartApp
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            DependencyService.Register<SQLiteDataStore>();
             MainPage = new MainPage();
         }
 
